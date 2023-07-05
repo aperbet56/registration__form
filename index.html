@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Formulaire d'inscription</h1>
+    </header>
+    <main>
+      <section class="cart__registration">
+        <form method="get" class="cart__registration__form">
+          <div class="cart__registration__form__question">
+            <label for="firstName">Prénom: </label>
+            <input type="text" name="firstName" id="firstName" required />
+            <p id="firstNameErrorMsg"><!-- ci est un message d'erreur --></p>
+          </div>
+          <div class="cart__registration__form__question">
+            <label for="lastName">Nom: </label>
+            <input type="text" name="lastName" id="lastName" required />
+            <p id="lastNameErrorMsg"></p>
+          </div>
+          <div class="cart__registration__form__question">
+            <label for="city">Ville: </label>
+            <input type="text" name="city" id="city" required />
+            <p id="cityErrorMsg"></p>
+          </div>
+          <div class="cart__registration__form__question">
+            <label for="telephone">Numéro de téléphone: </label>
+            <input type="tel" name="telephone" id="telephone" required />
+            <p id="phoneNumberErrorMsg"></p>
+          </div>
+          <div class="cart__registration__form__question">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required />
+            <p id="emailErrorMsg"></p>
+          </div>
+          <div class="cart__registration__form__question">
+            <label for="password">Mot de passe:</label>
+            <input type="password" autocomplete="off" id="password" required />
+            <p id="passwordErrorMsg"></p>
+          </div>
+          <div class="cart__registration__form__question">
+            <label for="confirm">Confirmation du mot de passe:</label>
+            <input type="password" autocomplete="off" id="confirm" required />
+            <p id="confirmErrorMsg"></p>
+          </div>
+          <div class="cart__registration__form__submit">
+            <input type="submit" value="S'inscrire !" id="registration" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <span>Copyright. Formulaire d'inscription.Tous droits réservés</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
