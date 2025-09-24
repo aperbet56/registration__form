@@ -6,7 +6,7 @@ const regexEmail = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$/;
 const regexPassword =
   /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
 
-// Récupération des différents inputs
+// Récupération des différents éléments HTML5
 const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const city = document.querySelector("#city");
