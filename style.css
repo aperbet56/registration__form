@@ -1,87 +1,111 @@
+/**** Importation des polices DM Sans et Alan Sans ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
 /**** Reset ****/
 * {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input {
 	border: none;
 	outline: none;
+	font-family: "DM Sans", sans-serif;
 }
 
 /**** Style général de la page ****/
+
 body {
-    background-color: rgb(215, 245, 234);
-    height: 100vh;
-	font-family: Arial, Helvetica, sans-serif;
+	background-color: #d7f5ea;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: "DM Sans", sans-serif;
 }
 
 main {
-    min-height: 90%;
+	flex-grow: 1;
+	min-height: 90%;
 }
 
 h1 {
-    margin-top: 20px;
-    margin-bottom: 26px;
-    text-align: center;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-family: "Alan Sans", sans-serif;
 }
 
 .cart__registration {
 	display: flex;
 	justify-content: center;
 }
+
 .cart__registration__form {
 	width: 50%;
 }
+
 .cart__registration__form__question {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 20px;
 }
+
 .cart__registration__form__question input {
-	border-radius: 20px;
+	border-radius: 12px;
 	height: 35px;
 	margin-top: 8px;
-    font-size: 17px;
-    padding-left: 20px;
+	font-size: 17px;
+	padding-left: 20px;
 }
+
 .cart__registration__form__question input:focus {
-    border: 2px solid cadetblue;
+	border: 2px solid #5f9ea0;
 }
+
 .cart__registration__form__question p {
-	margin: 0;
+	margin-top: 8px;
 	color: #e42828;
 	font-size: 15px;
 	margin-left: 8px;
 }
+
 .cart__registration__form__submit {
 	display: flex;
 	justify-content: center;
 }
+
 .cart__registration__form__submit input {
 	font-size: 20px;
 	border-radius: 35px;
-	border: none;
-	background-color:cadetblue;
+	background-color: #5f9ea0;
 	color: #ffffff;
 	padding: 18px 28px;
 	cursor: pointer;
 }
+
 .cart__registration__form__submit input:hover {
-	box-shadow: rgba(18, 206, 143, 0.9) 0 0 12px 6px;
+	box-shadow: 0 0 12px 6px rgba(18, 206, 143, 0.9);
 }
 
 footer {
-	margin: 15px 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	margin: 40px 0;
+	padding-inline: 15px;
+	width: 100%;
 }
 
-span {
+.footer__text {
+	text-align: center;
 	font-size: 18px;
+	font-family: "Alan Sans", sans-serif;
 }
 
-/**** Responsive ****/
-@media screen and (max-width: 700px) {
+/**** Responsive design version mobile  ****/
+
+@media screen and (max-width: 768px) {
 	h1 {
 		font-size: 20px;
 	}
@@ -94,11 +118,4 @@ span {
 	.cart__registration__form {
 		width: 100%;
 	}
-
-	span {
-		font-size: 16px;
-		display: block;
-		margin: 0 15px;
-	}
-
 }
