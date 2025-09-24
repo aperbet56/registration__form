@@ -7,13 +7,14 @@ const regexPassword =
   /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
 
 // Récupération des différents inputs
-let firstName = document.querySelector("#firstName");
-let lastName = document.querySelector("#lastName");
-let city = document.querySelector("#city");
-let phoneNumber = document.querySelector("#telephone");
-let email = document.querySelector("#email");
-let password = document.querySelector("#password");
-let confirmation = document.querySelector("#confirm");
+const firstName = document.querySelector("#firstName");
+const lastName = document.querySelector("#lastName");
+const city = document.querySelector("#city");
+const phoneNumber = document.querySelector("#telephone");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
+const confirmation = document.querySelector("#confirm");
+const footerCopyrightYear = document.querySelector(".footer__text__year");
 
 /**
  * Fonction firstNameValidation pour la validation du champ prénom
@@ -189,8 +190,34 @@ const send = () => {
       };
       console.log(contact);
       alert("Inscription confirmée!");
+      // Rechargement de la page
+      window.location.reload();
+      firstName.value = "";
+      lastName.value = "";
+      city.value = "";
+      telephone.value = "";
+      email.value = "";
+      password.value = "";
+      confirmation.value = "";
+      window.scrollTo(0, 0);
     }
   });
 };
-
+// Appel de la fonction send()
 send();
+
+// Déclaration de la fonction getCurrentYear qui va permettre l'affichage dynamique de l'année
+const getCurrentYear = () => {
+  // Récupération de la date actuelle stockée dans la constante date
+  const date = new Date();
+  //console.log(date);
+
+  // Récupération de l'année stockée dans la constante year
+  const year = date.getFullYear();
+  //console.log(year);
+
+  // Affichage dynamique de l'année en cours
+  footerCopyrightYear.textContent = `${year}`;
+};
+// Appel de la fonction getCurrentYear()
+getCurrentYear();
